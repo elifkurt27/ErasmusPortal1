@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Baþvuru</title>
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+          integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+          integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/df4ff89c1f.js" crossorigin="anonymous"></script>
+
+    <script src="session.js"></script>
+
+    <style>
+        .img {
+            opacity: 0.3;
+            z-index: auto;
+            position: absolute;
+            background-size: cover;
+            width: 100%;
+            height: 110%;
+        }
+    </style>
+
+    <style>
+        #menü {
+            margin-right: 300px;
+        }
+
+        #iletisim {
+            margin-right: 250px;
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <header>
+        <div class="container-fluid">
+            <div class=" bg-light ">
+                <div class="row">
+                    <div class="col-8">
+                        <ul class="nav p-3 mb-2 justify-content-center text-primary">
+
+                            <li class="nav-item">
+                                <a class="nav-link dropdown-toggle" href="Anasayfa.html" role="button" data-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-brands fa-react fa-2xl"></i>
+                                    Anasayfa
+                                </a>
+
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="erasmusNedir.html">Erasmus Nedir?</a>
+                                    <a class="dropdown-item" href="nasýlKatýlabilirim.html">Nasýl Katýlabilirim?</a>
+
+                                </div>
+                            </li>
+
+
+                            <li class="nav-item">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                    Baþvuru
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="Basvuru.html">Baþvuru</a>
+                                    <a class="dropdown-item" href="BasvuruKosullariveBelgeleri.html">Baþvuru Koþullarý ve Belgeleri</a>
+                                    <a class="dropdown-item" href="BurslarveÜcretler.html">Burslar ve Ücretler</a>
+                                    <a class="dropdown-item" id="basvuru" href="Basvuruformu.html" style="display:none;">Baþvuru Formu</a>
+                                    <a class="dropdown-item" href="SSS.html">SSS</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item" id="btn_div">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                                    Öðrenci
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="Hesapolustur.html">Hesap Oluþtur</a>
+                                    <a class="dropdown-item" href="GirisYap.html">Giriþ Yap</a>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Galeri.html">Galeri</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="BizeUlasin.html">Bize Ulaþýn</a>
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+                    <div class="col-4 my-4">
+                        <ul class="nav justify-content-center text-primary ">
+
+                            <li class="nav-item justify-content-between-content-end">
+                                <p id="header_sag"></p>
+                            </li>
+                            <li class="nav-item">
+                                <div class=" mx-3 " id="logout_Btn" style="display:none">
+                                    <button type="button" class="btn btn-sm btn-primary" onclick="logout()">Çýkýþ</button>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+
+    <div class="img">
+        <img src="resim1.jpg" alt="dünya resmi" width="100%" height="100%">
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <footer class="pt-4 my-md-5 pt-md-5 border-top">
+
+            <div class="row">
+                <div class="col-12 col-md">
+                </div>
+                <div class="col-4 col-md" id="menü">
+                    <h5><i class="fa-solid fa-compass"></i>Menü</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="Anasayfa.html">Hakkýnda</a></li>
+                        <li><a class="text-muted" href="Basvuru.html">Baþvuru</a></li>
+                        <li><a class="text-muted" href="ogrenci.html">Öðrenci</a></li>
+                        <li><a class="text-muted" href="Galeri.html">Galeri</a></li>
+                        <li><a class="text-muted" href="BizeUlasýn.html">Bize Ulaþýn</a></li>
+                    </ul>
+                </div>
+
+
+
+                <div class="col-4 col-md" id="iletisim">
+                    <h5>
+                        <i class="fa-solid fa-phone"></i>
+                        Ýletiþim
+                    </h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="text-muted" href="#">Team</a></li>
+                        <li><a class="text-muted" href="#">Locations</a></li>
+                        <li><a class="text-muted" href="#">Privacy</a></li>
+                        <li><a class="text-muted" href="#">Terms</a></li>
+                    </ul>
+                </div>
+
+
+
+                <div class="col-4 col-md-5">
+                    <div class='sfContentBlock'>
+                        <iframe referrerpolicy="no-referrer-when-downgrade" loading="lazy" style="border:3px none; margin"
+                                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3009.985279376452!2d28.960212!3d41.025578!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab9f0d6f5e2b9%3A0x8166ca686527143a!2sCibali%2C%20Kadir%20Has%20Cd.%2C%2034083%20Fatih%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1646153508609!5m2!1str!2str"
+                                width="500" height="250"></iframe>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <div class="b-example-divider"></div>
+
+        <div class="container">
+            <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <div class="col-md-4 d-flex align-items-center">
+                    <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                        <svg class="bi" width="30" height="24">
+                            <use xlink:href="#bootstrap" />
+                        </svg>
+                    </a>
+                    <span class="text-muted">&copy; 2023 KADÝR HAS ÜNÝVERSÝTESÝ</span>
+                </div>
+
+                <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+                    <li class="ms-3"><a class="text-muted" href="https://twitter.com/eliifkurrtt"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="ms-3"><a class="text-muted" href="https://www.instagram.com/"> <i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="ms-3"><a class="text-muted" href="https://www.facebook.com/campaign/landing.php?&campaign_id=1603087355&extra_1=s%7Cc%7C305038450781%7Ce%7Cfacebook%27%7C&placement=&creative=305038450781&keyword=facebook%27&partner_id=googlesem&extra_2=campaignid%3D1603087355%26adgroupid%3D61834755758%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D%26target%3D%26targetid%3Dkwd-362360550869%26loc_physical_ms%3D9073387%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=CjwKCAiAr4GgBhBFEiwAgwORrTcHWNjYLFqkasyzJbBWdrhFy663XpD9ejPg7W3-k1dUH4hKaOmXyxoCMpQQAvD_BwE"> <i class="fa-brands fa-facebook"></i> </a></li>
+                    <li class="ms-3"><a class="text-muted" href="https://www.youtube.com/"> <i class="fa-brands fa-youtube"></i> </a></li>
+                </ul>
+            </footer>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+            integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+
+    <script>checkLogin();</script>
+
+</body>
+</html>
